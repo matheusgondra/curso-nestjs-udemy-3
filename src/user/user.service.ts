@@ -97,7 +97,7 @@ export class UserService {
   }
 
   async exists(id: number) {
-    const register = await this.prismaService.user.findUnique({
+    const register = await this.prismaService.user.count({
       where: {
         id
       }
